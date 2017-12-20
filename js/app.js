@@ -26,12 +26,15 @@ $("button").on("click", function(e) {
                     "background-repeat": "none",
                     "background-size": "100%",
                 });
+                
             },
             error: function() {
                 $content.text('Please try again later!');
             }
-            
-    });
+    })
+    setTimeout(function() {
+        $('button').attr("disabled", "true");
+    },500)
 });
 
 
